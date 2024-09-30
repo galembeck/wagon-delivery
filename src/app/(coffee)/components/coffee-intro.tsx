@@ -20,39 +20,27 @@ export const CoffeeIntro = () => {
               Encontre o café perfeito para qualquer hora do dia
             </h1>
             <p className="text-base font-roboto text-base-subtitle font-normal text-pretty">
-              Com o serviço exclusivo de{" "}
-              <span className="text-base-title font-bold">Coffee Delivery</span>{" "}
-              da <span className="text-base-title font-bold">Wagon</span>, você
-              pode desfrutar do café perfeito, onde quer que esteja, e a
-              qualquer hora do dia, com apenas alguns cliques.
+              Com o serviço exclusivo de <strong>Coffee Delivery</strong> da{" "}
+              <strong>Wagon</strong>, você pode desfrutar do café perfeito, onde
+              quer que esteja, e a qualquer hora do dia, com apenas alguns
+              cliques.
               <br />
               <br />
-              Explore nossa{" "}
-              <span className="text-base-title font-bold">
+              Explore nossa <strong>
                 seleção de produtos
-              </span>{" "}
-              cuidadosamente{" "}
-              <span className="text-base-title font-bold">selecionados</span>{" "}
-              logo abaixo.
+              </strong> cuidadosamente <strong>selecionados</strong> logo
+              abaixo.
               <br />
               Escolha seus favoritos e adicione-os ao carrinho com facilidade.
               Para completar sua compra, basta acessar a{" "}
-              <span className="text-base-title font-bold">
-                página do carrinho
-              </span>
+              <strong>página do carrinho</strong>
               , inserir seu endereço de entrega e escolher o método de pagamento
               de sua preferência.
               <br />
               <br />
-              Agora é só{" "}
-              <span className="text-base-title font-bold">
-                relaxar e aguardar
-              </span>
-              . Seu{" "}
-              <span className="text-base-title font-bold">café fresquinho</span>{" "}
-              estará{" "}
-              <span className="text-base-title font-bold">a caminho</span>,
-              trazendo o sabor e a energia que você precisa, onde e quando
+              Agora é só <strong>relaxar e aguardar</strong>. Seu{" "}
+              <strong>café fresquinho</strong> estará <strong>a caminho</strong>
+              , trazendo o sabor e a energia que você precisa, onde e quando
               quiser!
             </p>
           </div>
@@ -74,7 +62,7 @@ export const CoffeeIntro = () => {
           alt="Coffee"
           width={476}
           height={360}
-          // className="min-[900px]:block hidden"
+          className="min-[1120px]:block hidden"
         />
       </div>
     </section>

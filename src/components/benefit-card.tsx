@@ -14,7 +14,7 @@ export const BenefitCard = ({ icon, benefit, iconBg }: BenefitCardProps) => {
   return (
     <div className="flex items-center gap-3">
       <div
-        className={`w-8 h-8 rounded-[50%] ${bgColorClass} text-base-white flex items-center justify-center`}
+        className={`w-8 h-8 rounded-[50%] ${bgColorClass} text-base-white flex flex-shrink-0 items-center justify-center`}
       >
         <Image src={icon} alt="Icon" width={16} height={16} />
       </div>

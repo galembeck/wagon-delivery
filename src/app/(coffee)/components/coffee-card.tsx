@@ -6,6 +6,9 @@ import { CoffeeInformation } from "@/types";
 import { formatPrice } from "@/utils/format-price";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
+import { QuantityInput } from "@/components/quantity-input";
+import { ShoppingCart } from "phosphor-react";
+import { useCart } from "@/hooks/useCart";
 
 interface CoffeeCardProps {
   coffeeInformation: CoffeeInformation;
@@ -20,15 +23,15 @@ export const CoffeeCard = ({ coffeeInformation }: CoffeeCardProps) => {
     setQuantity((state) => state - 1);
   }
 
-  // const { addCoffeeToCart } = useCart();
+  const { addCoffeeToCart } = useCart();
 
-  // function handleAddToCart() {
-  //   const coffeeToAdd = {
-  //     ...coffeeInformation,
-  //     quantity,
-  //   };
-  //   addCoffeeToCart(coffeeToAdd);
-  // }
+  function handleAddToCart() {
+    const coffeeToAdd = {
+      ...coffeeInformation,
+      quantity,
+    };
+    addCoffeeToCart(coffeeToAdd);
+  }
 
   const formattedPrice = formatPrice(coffeeInformation.price);
 
@@ -59,6 +62,29 @@ export const CoffeeCard = ({ coffeeInformation }: CoffeeCardProps) => {
       <p className="text-base-label text-sm font-normal mb-8">
         {coffeeInformation.description}
       </p>
+
+      <div className="flex items-center justify-between w-full mt-auto pb-2">
+        <div className="flex items-center gap-[3px]">
+          <p className="text-regular-sm text-base-text font-roboto">R$</p>
+          <p className="text-title-md text-base-text font-extrabold font-baloo">
+            {formattedPrice}
+          </p>
+        </div>
+
+        <div className="flex w-[8rem] items-center">
+          <QuantityInput
+            quantity={quantity}
+            onIncrease={handleIncrease}
+            onDecrease={handleDecrease}
+          />
+          <button
+            className="flex items-center justify-center w-[2.375rem] h-[2.375rem] border-none bg-brand-purple-dark text-base-card rounded-[6px] ml-[0.3rem] transition-colors hover:bg-brand-purple-dark/90"
+            onClick={handleAddToCart}
+          >
+            <ShoppingCart size={22} weight="fill" />
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

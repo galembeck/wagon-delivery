@@ -199,7 +199,7 @@ export const Footer = () => {
           &copy; {new Date().getFullYear()} Wagon Delivery. Todos os direitos
           reservados.
         </p>
-        <span className="text-base-text text-sm flex items-center mt-8 md:mt-0">
+        <span className="text-base-text text-sm flex items-center mt-8 md:mt-0 pb-5">
           Made with
           <Heart size={14} color="#8047F8" weight="fill" className="mx-1" />
           by
