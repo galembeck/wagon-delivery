@@ -56,3 +56,7 @@ export interface ErrorsType {
     };
   };
 }
+
+interface CoffeeCartCardProps {
+  coffee: CartItem;
+}
