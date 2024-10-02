@@ -23,15 +23,14 @@ export const CompleteOrderForm = () => {
         />
 
         {/* <AddressForm /> */}
-        <div className="grid grid-cols-[12.5rem_17.25rem_3.75rem] grid-flow-dense gap-x-3 gap-y-4 w-full">
+        <div className="grid grid-cols-[12.5rem_17.25rem_3.75rem] gap-4 w-full">
           <FormInput
-            type="number"
+            type="text"
             placeholder="CEP"
-            className="col-span-3 max-w-[12.5rem]"
+            className="col-span-3"
             {...register("cep")}
             error={errors.cep?.message}
           />
-          <br />
           <FormInput
             placeholder="Rua"
             className="col-span-3"
@@ -39,8 +38,9 @@ export const CompleteOrderForm = () => {
             error={errors.street?.message}
           />
           <FormInput
-            type="number"
+            type="text"
             placeholder="Número"
+            className="col-span-1"
             {...register("number")}
             error={errors.number?.message}
           />
@@ -53,26 +53,22 @@ export const CompleteOrderForm = () => {
           />
           <FormInput
             placeholder="Bairro"
+            className="col-span-1"
             {...register("district")}
             error={errors.district?.message}
           />
           <FormInput
             placeholder="Cidade"
+            className="col-span-1"
             {...register("city")}
             error={errors.city?.message}
           />
           <FormInput
             placeholder="UF"
+            className="col-span-1"
             {...register("uf")}
             error={errors.uf?.message}
           />
-
-          {/* <Input
-            placeholder="CEP"
-            type="text"
-            className="col-span-3 max-w-[12.5rem]"
-            {...register("cep")}
-          /> */}
         </div>
       </div>
 

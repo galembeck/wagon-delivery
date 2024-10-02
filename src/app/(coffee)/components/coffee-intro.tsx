@@ -9,8 +9,8 @@ export const CoffeeIntro = () => {
         src="/assets/coffee-delivery/coffee-intro-background.png"
         alt="Background"
         width={0}
-        height={544}
-        className="w-full absolute max-h-[34rem]"
+        height={0}
+        className="w-full h-full absolute"
       />
 
       <div className="flex items-center justify-between gap-14 w-full max-w-[70rem] mr-auto ml-auto max-[1120px]:p-8 flex-col min-[900px]:flex-row relative">

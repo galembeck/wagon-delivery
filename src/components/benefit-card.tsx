@@ -18,7 +18,9 @@ export const BenefitCard = ({ icon, benefit, iconBg }: BenefitCardProps) => {
       >
         <Image src={icon} alt="Icon" width={16} height={16} />
       </div>
-      <p className="font-semibold text-base-text text-base">{benefit}</p>
+      <p className="font-semibold text-base-text text-base font-baloo">
+        {benefit}
+      </p>
     </div>
   );
 };

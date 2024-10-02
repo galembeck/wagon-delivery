@@ -55,7 +55,7 @@
   }
 
   .coffee-intro-container {
-    @apply w-full h-[34rem] items-center justify-center;
+    @apply w-full h-[36rem] items-center justify-center;
   }
 }
 
