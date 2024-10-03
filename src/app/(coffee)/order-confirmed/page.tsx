@@ -1,39 +1,37 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
-import { MapPin } from "phosphor-react";
-import { InfoWithIcon } from "./components/info-with-icon";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useOrderContext } from "@/contexts/order-context";
+import { useRouter } from "next/navigation";
+import { Clock, CurrencyDollar, MapPin } from "phosphor-react";
 import { useEffect } from "react";
+import { InfoWithIcon } from "./components/info-with-icon";
+import Image from "next/image";
 
 export default function OrderConfirmedPage() {
-  const searchParams = useSearchParams(); // Obtendo os parâmetros de busca
+  const { orderData } = useOrderContext();
+
   const router = useRouter();
-
-  // Extraindo os dados da query usando searchParams
-  const cep = searchParams.get("cep");
-  const street = searchParams.get("street");
-  const number = searchParams.get("number");
-  const complement = searchParams.get("complement");
-  const district = searchParams.get("district");
-  const city = searchParams.get("city");
-  const uf = searchParams.get("uf");
-  const paymentMethod = searchParams.get("paymentMethod");
-
   useEffect(() => {
-    // Verifica se não há dados do pedido e redireciona para a página inicial
-    if (!cep || !street || !number || !district || !city || !uf) {
-      router.push("/"); // Redireciona para a página inicial ou para outra página que você preferir
+    if (!orderData) {
+      router.push("/");
     }
-  }, [cep, street, number, district, city, uf, router]);
+  }, [orderData, router]);
 
-  // Se a compra não estiver confirmada, não renderize nada
-  if (!cep || !street || !number || !district || !city || !uf) {
-    return null; // Não renderiza nada se a condição não for satisfeita
+  if (!orderData) {
+    return null;
   }
 
+  const { street, number, district, city, uf, paymentMethod } = orderData;
+
+  const paymentMethodLabels: Record<string, string> = {
+    credit: "Cartão de Crédito",
+    debit: "Cartão de Débito",
+    money: "Dinheiro",
+  };
+
   return (
-    <div className="w-full max-w-[70rem] mr-auto ml-auto max-[1120px]:p-8 flex flex-col gap-10 mt-20">
+    <div className="w-full max-w-[70rem] mr-auto ml-auto max-[1120px]:p-8 flex flex-col gap-10 mt-20 pb-20">
       <div>
         <h1 className="text-title-lg font-baloo font-extrabold text-brand-yellow-dark">
           Uhu! Pedido confirmado...
@@ -44,21 +42,48 @@ export default function OrderConfirmedPage() {
         </p>
       </div>
 
-      <section className="flex items-center justify-between">
-        <div className="flex flex-col gap-8 p-10 min-w-[32rem] rounded-[6px_36px_6px_36px] bg-base-background relative linear-gradient-box">
+      <section className="flex flex-col lg:flex-row items-center justify-between">
+        <div className="flex flex-col gap-7 p-10 w-full max-w-[32rem] rounded-[6px_36px_6px_36px] bg-base-background relative linear-gradient-box">
           <InfoWithIcon
             icon={<MapPin weight="fill" />}
             iconBg={"brand-purple"}
             text={
               <p>
-                Entrega em{" "}
-                <strong>{`${street}, ${number} ${
-                  complement ? `, ${complement}` : ""
-                }, ${district} - ${city}, ${uf} (${cep})`}</strong>
+                <strong>
+                  {street}, {number} - {district}{" "}
+                </strong>
+                | {city}, {uf}
+              </p>
+            }
+          />
+          <InfoWithIcon
+            icon={<Clock weight="fill" />}
+            iconBg={"brand-yellow"}
+            text={
+              <p>
+                Previsão de entrega: <strong>20 min - 30 min</strong>
+              </p>
+            }
+          />
+          <InfoWithIcon
+            icon={<CurrencyDollar weight="fill" />}
+            iconBg={"brand-yellow-dark"}
+            text={
+              <p>
+                Método de pagamento:{" "}
+                <strong>{paymentMethodLabels[paymentMethod]}</strong>
               </p>
             }
           />
         </div>
+
+        <Image
+          src="/assets/coffee-delivery/coffee-confirmed-order.svg"
+          alt="Confirmed order"
+          className="lg:max-w-[50%] lg:order-2 mt-16 lg:mt-0"
+          width={492}
+          height={293}
+        />
       </section>
     </div>
   );

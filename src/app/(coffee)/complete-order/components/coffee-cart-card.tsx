@@ -51,8 +51,6 @@ export const CoffeeCartCard = ({ coffee }: CoffeeCartCardProps) => {
               />
             </div>
 
-            {/* TODO: CORRIGIR ERRO DE HYDRATION WARNING */}
-
             <Button
               className="flex items-center h-full gap-1 px-2 text-xs text-base-text bg-base-button rounded-[6px] transition hover:bg-base-hover"
               onClick={handleRemove}

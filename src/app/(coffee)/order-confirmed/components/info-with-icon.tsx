@@ -12,20 +12,22 @@ export const InfoWithIcon = ({
   iconBg,
   weight,
 }: InfoWithIconProps) => {
-  const bgColorClass = colorClasses[iconBg] || "bg-base-text";
+  const bgColorClass = colorClasses[iconBg] || "bg-brand-purple";
 
   return (
     <div className="flex items-center gap-3">
       <div
-        className={`flex items-center justify-center w-8 h-8 rounded-[50%] ${bgColorClass} text-white`}
+        className={`flex items-center justify-center min-w-[2rem] min-h-[2rem] rounded-[50%] ${bgColorClass} text-white`}
       >
         {icon}
-        {typeof text === "string" ? (
-          <p className={`text-base-text font-roboto font-${weight}`}>{text}</p>
-        ) : (
-          text
-        )}
       </div>
+      <p
+        className={`text-base-title font-baloo font-${
+          weight ? weight : "font-semibold"
+        }`}
+      >
+        {text}
+      </p>
     </div>
   );
 };

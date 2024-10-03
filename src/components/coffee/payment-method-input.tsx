@@ -16,16 +16,15 @@ export const PaymentMethodInput = forwardRef<
         {...props}
         type="radio"
         name="paymentMethod"
-        className="hidden appearance-none checked:bg-brand-purple-light border-brand-purple hover:bg-brand-purple-light"
+        className="hidden peer"
       />
       <label
         htmlFor={id}
-        className="bg-brand-purple-light border-brand-purple hover:bg-brand-purple-light"
+        className="flex items-center justify-start bg-base-button text-base-text px-4 h-12 gap-3 text-xs font-semibold uppercase rounded-[6px] border border-base-button transition-colors duration-200 cursor-pointer font-baloo
+        peer-checked:bg-brand-purple-light peer-checked:border-brand-purple hover:bg-base-hover"
       >
-        <div className="flex items-center justify-start bg-base-button text-base-text px-4 h-12 gap-3 text-xs font-semibold uppercase rounded-[6px] border-base-button transition hover:bg-base-hover cursor-pointer font-baloo font-smeibold">
-          <p className="text-brand-purple">{icon}</p>
-          {label}
-        </div>
+        <p className="text-brand-purple">{icon}</p>
+        {label}
       </label>
     </div>
   );

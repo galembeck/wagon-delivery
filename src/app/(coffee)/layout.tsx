@@ -3,6 +3,7 @@ import { Footer } from "@/components/coffee/footer";
 
 import "./styles/styles.css";
 import { CartContextProvider } from "@/contexts/cart-context";
+import { OrderContextProvider } from "@/contexts/order-context";
 
 export default async function CoffeeDeliveryLayout({
   children,
@@ -12,15 +13,17 @@ export default async function CoffeeDeliveryLayout({
   return (
     <main suppressHydrationWarning>
       <CartContextProvider>
-        <header>
-          <Header />
-        </header>
+        <OrderContextProvider>
+          <header>
+            <Header />
+          </header>
 
-        <div className="mt-[9.8rem]">{children}</div>
+          <div className="mt-[9.8rem]">{children}</div>
 
-        <footer>
-          <Footer />
-        </footer>
+          <footer>
+            <Footer />
+          </footer>
+        </OrderContextProvider>
       </CartContextProvider>
     </main>
   );

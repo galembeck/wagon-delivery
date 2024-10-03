@@ -9,6 +9,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import * as z from "zod";
 import { CompleteOrderForm } from "./components/complete-order-form";
 import { SelectedCoffees } from "./components/selected-coffees";
+import { useOrderContext } from "@/contexts/order-context";
 
 enum PaymentMethods {
   credit = "credit",
@@ -37,6 +38,7 @@ type ConfirmOrderFormData = OrderData;
 
 export default function CompleteOrderPage() {
   const router = useRouter();
+  const { setOrderData } = useOrderContext();
 
   const confirmOrderForm = useForm<ConfirmOrderFormData>({
     resolver: zodResolver(confirmOrderFormValidationSchema),
@@ -50,12 +52,8 @@ export default function CompleteOrderPage() {
 
   const handleConfirmOrder = (data: ConfirmOrderFormData) => {
     cleanCart();
-
-    const queryData = new URLSearchParams(
-      data as Record<string, string>
-    ).toString();
-
-    router.push(`/order-confirmed?${queryData}`);
+    setOrderData(data);
+    router.push("/order-confirmed");
   };
 
   return (
