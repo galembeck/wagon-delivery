@@ -30,7 +30,7 @@ export const CoffeeCartCard = ({ coffee }: CoffeeCartCardProps) => {
     <div className="flex items-center justify-between w-full border-b border-base-button pb-6 mb-6">
       <div className="flex items-center gap-5">
         <Image
-          src={`/assets/coffee-delivery/coffees/${coffee.photo}`}
+          src={`/assets/coffee/coffees/${coffee.photo}`}
           alt="Coffee"
           width={64}
           height={64}

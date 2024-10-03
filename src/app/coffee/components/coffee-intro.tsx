@@ -6,7 +6,7 @@ export const CoffeeIntro = () => {
   return (
     <section className="coffee-intro-container relative">
       <Image
-        src="/assets/coffee-delivery/coffee-intro-background.png"
+        src="/assets/coffee/intro-background.png"
         alt="Background"
         width={0}
         height={0}
@@ -58,7 +58,7 @@ export const CoffeeIntro = () => {
         </div>
 
         <Image
-          src="/assets/coffee-delivery/coffee-intro.png"
+          src="/assets/coffee/intro.png"
           alt="Coffee"
           width={476}
           height={360}

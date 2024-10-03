@@ -18,7 +18,7 @@ export const Footer = () => {
           <div className="flex items-start">
             <Link href="/">
               <Image
-                src="/assets/coffee-delivery/coffee-delivery-logo.svg"
+                src="/assets/coffee/coffee-logo.svg"
                 alt="Logo"
                 width={85}
                 height={40}

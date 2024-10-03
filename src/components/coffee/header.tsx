@@ -24,7 +24,7 @@ export const Header = () => {
       <div className="w-full max-w-[70rem] mr-auto ml-auto max-[1120px]:p-8 flex items-center justify-between">
         <Link href="/">
           <Image
-            src="/assets/coffee-delivery/coffee-delivery-logo.svg"
+            src="/assets/coffee/coffee-logo.svg"
             alt="Logo"
             width={85}
             height={40}

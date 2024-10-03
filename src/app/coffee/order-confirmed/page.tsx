@@ -78,7 +78,7 @@ export default function OrderConfirmedPage() {
         </div>
 
         <Image
-          src="/assets/coffee-delivery/coffee-confirmed-order.svg"
+          src="/assets/coffee/confirmed-order.svg"
           alt="Confirmed order"
           className="lg:max-w-[50%] lg:order-2 mt-16 lg:mt-0"
           width={492}
