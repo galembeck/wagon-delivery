@@ -7,12 +7,12 @@ import Link from "next/link";
 import { useUserLocation } from "@/hooks/useUserLocation";
 import { MapPin, ShoppingCart } from "phosphor-react";
 import { useCart } from "@/hooks/useCart";
+import { HeaderProps } from "@/types";
 
-export const Header = () => {
+export const Header = ({ type }: HeaderProps) => {
   const { userRegion, userCountry } = useUserLocation();
   const { cartQuantity } = useCart();
 
-  // Check if component is mounted (to avoid hydration warnings)
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -22,17 +22,26 @@ export const Header = () => {
   return (
     <header className="header-container">
       <div className="w-full max-w-[70rem] mr-auto ml-auto max-[1120px]:p-8 flex items-center justify-between">
-        <Link href="/">
-          <Image
-            src="/assets/coffee/coffee-logo.svg"
-            alt="Logo"
-            width={85}
-            height={40}
-            priority
-          />
+        <Link href="/coffee">
+          {type === "coffee" ? (
+            <Image
+              src="/assets/coffee/coffee-logo.svg"
+              alt="Logo"
+              width={180}
+              height={38}
+              priority
+            />
+          ) : (
+            <Image
+              src="/assets/food/food-wagon-logo.svg"
+              alt="Logo"
+              width={180}
+              height={38}
+              priority
+            />
+          )}
         </Link>
 
-        {/* Only render dynamic content after the component is mounted */}
         {isMounted && (
           <div className="header-buttons-container">
             <div className="flex items-center justify-center relative gap-1 min-w-9 h-9 rounded-[6px] p-2 bg-brand-purple-light">
@@ -48,7 +57,7 @@ export const Header = () => {
                   {cartQuantity}
                 </div>
               )}
-              <Link href="/complete-order">
+              <Link href="/coffee/complete-order">
                 <ShoppingCart
                   size={20}
                   weight="fill"

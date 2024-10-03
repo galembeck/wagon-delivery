@@ -1,5 +1,20 @@
 import { InputHTMLAttributes, ReactNode } from "react";
 
+export interface OptionCardProps {
+  title: string;
+  buttonText: string;
+  image: string;
+  bgColor: string;
+}
+
+export interface HeaderProps {
+  type: "coffee" | "food";
+}
+
+export interface FooterProps {
+  type: "coffee" | "food";
+}
+
 export interface BenefitCardProps {
   icon: string;
   benefit: string | ReactNode;
@@ -13,7 +28,7 @@ export interface InfoWithIconProps {
   weight?: string | number;
 }
 
-export interface CoffeeInformation {
+export interface ProductInformation {
   id: number;
   tags: string[];
   name: string;
@@ -29,7 +44,7 @@ export interface QuantityInputProps {
   onDecrease: () => void;
 }
 
-export interface CartItem extends CoffeeInformation {
+export interface CartItem extends ProductInformation {
   quantity: number;
 }
 
@@ -37,7 +52,7 @@ export interface CartContextType {
   cartItems: CartItem[];
   cartQuantity: number;
   cartItemsTotal: number;
-  addCoffeeToCart: (coffee: CartItem) => void;
+  addProductToCart: (product: CartItem) => void;
   changeCartItemQuantity: (
     cartItemId: number,
     type: "increase" | "decrease"

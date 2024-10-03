@@ -9,28 +9,48 @@ import {
   TwitterLogo,
   Heart,
 } from "phosphor-react";
+import { FooterProps } from "@/types";
 
-export const Footer = () => {
+export const Footer = ({ type }: FooterProps) => {
   return (
     <footer className="footer-container">
       <div className="grid gap-8 xl:grid-cols-3 xl:gap-8 w-full">
         <div className="flex flex-col items-start justify-start">
           <div className="flex items-start">
-            <Link href="/">
-              <Image
-                src="/assets/coffee/coffee-logo.svg"
-                alt="Logo"
-                width={85}
-                height={40}
-              />
+            <Link href="/coffee">
+              {type === "coffee" ? (
+                <Image
+                  src="/assets/coffee/coffee-logo.svg"
+                  alt="Logo"
+                  width={180}
+                  height={38}
+                />
+              ) : (
+                <Image
+                  src="/assets/food/food-wagon-logo.svg"
+                  alt="Logo"
+                  width={180}
+                  height={38}
+                />
+              )}
             </Link>
           </div>
-          <p className="text-base-text/70 mt-4 text-sm text-start">
-            Explore nossa seleção de cafés premium, frescos, de espressos ricos
-            a lattes cremosos e tudo o que há entre eles. Se você precisa de um
-            estimulante matinal ou um reforço à tarde, nós temos tudo o que você
-            precisa.
-          </p>
+          {type === "coffee" ? (
+            <p className="text-base-text/70 mt-4 text-sm text-start">
+              Explore nossa seleção de cafés premium, frescos, de espressos
+              ricos a lattes cremosos e tudo o que há entre eles. Se você
+              precisa de um estimulante matinal ou um reforço à tarde, nós temos
+              tudo o que você precisa.
+            </p>
+          ) : (
+            <p className="text-base-text/70 mt-4 text-sm text-start">
+              Explore nossa seleção de pratos irresistíveis, preparados com
+              ingredientes frescos e variados, de refeições caseiras a delícias
+              gourmet e tudo o que há entre elas. Seja para um almoço rápido ou
+              um jantar especial, temos tudo o que você precisa para satisfazer
+              seu apetite.
+            </p>
+          )}
           <div className="mt-4 flex items-center justify-center gap-2">
             <Link href="https://instagram.com/galembeckx">
               <InstagramLogo size={30} color="#DD2A7B" weight="fill" />
@@ -88,7 +108,7 @@ export const Footer = () => {
             <div className="mt-10 md:mt-0 flex flex-col">
               <h3 className="text-lg font-bold text-base-title">Contato</h3>
               <ul className="mt-4 text-sm text-muted-foreground">
-                <li className="">
+                <li>
                   <Link
                     href="/"
                     className="hover:text-foreground transition-all duration-300"
@@ -124,7 +144,7 @@ export const Footer = () => {
             </div>
           </div>
           <div className="md:grid md:grid-cols-2 md:gap-8">
-            <div className="">
+            <div>
               <h3 className="text-lg font-bold text-base-title">Legal</h3>
               <ul className="mt-4 text-sm text-muted-foreground">
                 <li className="mt-2">
@@ -164,20 +184,28 @@ export const Footer = () => {
             <div className="mt-10 md:mt-0 flex flex-col">
               <h3 className="text-lg font-bold text-base-title">Soluções</h3>
               <ul className="mt-4 text-sm text-muted-foreground">
-                <li className="">
+                <li>
                   <Link
                     href="/"
                     className="hover:text-foreground transition-all duration-300"
                   >
-                    Coffee Delivery
+                    Wagon Delivery
                   </Link>
                 </li>
                 <li className="mt-2">
                   <Link
-                    href="/"
+                    href="/coffee"
                     className="hover:text-foreground transition-all duration-300"
                   >
-                    Food Delivery
+                    Coffee Wagon
+                  </Link>
+                </li>
+                <li className="mt-2">
+                  <Link
+                    href="/food"
+                    className="hover:text-foreground transition-all duration-300"
+                  >
+                    Food Wagon
                   </Link>
                 </li>
                 <li className="mt-2">

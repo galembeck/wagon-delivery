@@ -9,17 +9,17 @@
   outline: none;
 }
 
-.coffee-scrollbar::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0.4rem;
 }
 
-.coffee-scrollbar::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: #E6E5E5;
 }
 
-.coffee-scrollbar::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   border-radius: 2rem;
-  background: #8047F8;
+  background: #DBAC2C;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

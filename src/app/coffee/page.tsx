@@ -1,7 +1,7 @@
 import { CoffeeIntro } from "./components/coffee-intro";
 import { CoffeeList } from "./components/coffee-list";
 
-export default function CoffeeDeliveryPage() {
+export default function CoffeeWagonPage() {
   return (
     <main>
       <CoffeeIntro />

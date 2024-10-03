@@ -53,7 +53,7 @@ export default function CompleteOrderPage() {
   const handleConfirmOrder = (data: ConfirmOrderFormData) => {
     cleanCart();
     setOrderData(data);
-    router.push("/order-confirmed");
+    router.push("/coffee/order-confirmed");
   };
 
   return (

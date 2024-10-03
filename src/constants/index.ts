@@ -1,3 +1,23 @@
+export const rootCategories = [
+  "Tradicional",
+  "Americano",
+  "Cremoso",
+  "Gelado",
+  "Com leite",
+  "Alcoólico",
+  "Especial",
+  "Brasileira",
+  "Árabe",
+  "Doces & Bolos",
+  "Lanches",
+  "Saudável",
+  "Japonesa",
+  "Carnes",
+  "Pizza",
+  "Italiana",
+  "Vegetariana",
+];
+
 export const coffeeDeliveryBenefits = [
   {
     icon: "/icons/shopping-cart.svg",

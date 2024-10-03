@@ -2,7 +2,7 @@ import { Header } from "@/components/header";
 
 import { Footer } from "@/components/footer";
 
-export default async function CoffeeWagonLayout({
+export default async function FoodWagonLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -10,13 +10,13 @@ export default async function CoffeeWagonLayout({
   return (
     <main suppressHydrationWarning>
       <header>
-        <Header type="coffee" />
+        <Header type="food" />
       </header>
 
       <div className="mt-[9.8rem]">{children}</div>
 
       <footer>
-        <Footer type="coffee" />
+        <Footer type="food" />
       </footer>
     </main>
   );
