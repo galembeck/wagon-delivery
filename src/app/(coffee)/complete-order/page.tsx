@@ -4,11 +4,10 @@
 
 import { useCart } from "@/hooks/useCart";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { FormProvider, useForm } from "react-hook-form";
 import * as z from "zod";
 import { CompleteOrderForm } from "./components/complete-order-form";
-import { useCallback } from "react";
 import { SelectedCoffees } from "./components/selected-coffees";
 
 enum PaymentMethods {
@@ -17,7 +16,7 @@ enum PaymentMethods {
   money = "money",
 }
 
-const confirmOderFormValidationSchema = z.object({
+const confirmOrderFormValidationSchema = z.object({
   cep: z.string().min(1, "Informe o CEP"),
   street: z.string().min(1, "Informe o rua"),
   number: z.string().min(1, "Informe o número"),
@@ -27,58 +26,42 @@ const confirmOderFormValidationSchema = z.object({
   uf: z.string().min(1, "Informe a UF"),
   paymentMethod: z.nativeEnum(PaymentMethods, {
     errorMap: () => {
-      return { message: "Informe o método de pagamento" };
+      return { message: "Informe o método de pagamento." };
     },
   }),
 });
 
-export type OrderData = z.infer<typeof confirmOderFormValidationSchema>;
+export type OrderData = z.infer<typeof confirmOrderFormValidationSchema>;
 
 type ConfirmOrderFormData = OrderData;
 
 export default function CompleteOrderPage() {
+  const router = useRouter();
+
   const confirmOrderForm = useForm<ConfirmOrderFormData>({
-    resolver: zodResolver(confirmOderFormValidationSchema),
+    resolver: zodResolver(confirmOrderFormValidationSchema),
     defaultValues: {
       paymentMethod: undefined,
     },
   });
 
   const { handleSubmit } = confirmOrderForm;
-
   const { cleanCart } = useCart();
 
   const handleConfirmOrder = (data: ConfirmOrderFormData) => {
-    const router = useRouter();
+    cleanCart();
 
-    // Use o `useCallback` para memorizar a função
-    const confirmOrder = useCallback(() => {
-      // Redirecione para a página de confirmação, passando dados como query params ou localStorage
-      router.push({
-        pathname: "/order-confirmed",
-        query: data,
-      });
+    const queryData = new URLSearchParams(
+      data as Record<string, string>
+    ).toString();
 
-      // Limpa o carrinho após a navegação
-      cleanCart();
-    }, [router, data, cleanCart]);
-
-    return confirmOrder;
+    router.push(`/order-confirmed?${queryData}`);
   };
-
-  // function handleConfirmOrder(data: ConfirmOrderFormData) {
-  //   return (
-  //     <>
-  //       <Link href={{ pathname: "/order-confirmed", query: data }} />
-  //     </>
-  //   );
-  //   cleanCart();
-  // }
 
   return (
     <FormProvider {...confirmOrderForm}>
       <form
-        className="flex justify-between gap-8 mt-10 w-full max-w-[70rem] mr-auto ml-auto max-[1120px]:p-8"
+        className="flex flex-col lg:flex-row justify-between gap-8 mt-10 w-full max-w-[70rem] mr-auto ml-auto max-[1120px]:p-8"
         onSubmit={handleSubmit(handleConfirmOrder)}
       >
         <CompleteOrderForm />

@@ -1,9 +1,16 @@
-import { ReactNode } from "react";
+import { InputHTMLAttributes, ReactNode } from "react";
 
 export interface BenefitCardProps {
   icon: string;
   benefit: string | ReactNode;
   iconBg: string;
+}
+
+export interface InfoWithIconProps {
+  icon: ReactNode;
+  text: string | ReactNode;
+  iconBg: string;
+  weight?: string | number;
 }
 
 export interface CoffeeInformation {
@@ -57,6 +64,15 @@ export interface ErrorsType {
   };
 }
 
-interface CoffeeCartCardProps {
+export interface CoffeeCartCardProps {
   coffee: CartItem;
+}
+
+export type PaymentMethodInputProps = InputHTMLAttributes<HTMLInputElement> & {
+  icon: ReactNode;
+  label: string;
+};
+
+export interface LocationType {
+  state: OrderData;
 }

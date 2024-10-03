@@ -1,4 +1,4 @@
-import { BenefitCard } from "@/components/benefit-card";
+import { BenefitCard } from "@/components/coffee/benefit-card";
 import { coffeeDeliveryBenefits } from "@/constants";
 import Image from "next/image";
 

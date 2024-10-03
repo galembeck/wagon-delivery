@@ -33,6 +33,17 @@
   scrollbar-width: none; /* Firefox */
 }
 
+.linear-gradient-box {
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: 7px 37px 7px 37px;
+    background: linear-gradient(182.89deg, #DBAC2C 2.61%, #8047F8 98.76%);
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

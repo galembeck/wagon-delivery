@@ -1,6 +1,6 @@
 "use client";
 
-import { QuantityInput } from "@/components/quantity-input";
+import { QuantityInput } from "@/components/coffee/quantity-input";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/hooks/useCart";
 import { CoffeeCartCardProps } from "@/types";
@@ -63,6 +63,10 @@ export const CoffeeCartCard = ({ coffee }: CoffeeCartCardProps) => {
           </div>
         </div>
       </div>
+
+      <p className="text-base-subtitle font-baloo font-bold text-regular-md self-start">
+        R$ {formattedPrice}
+      </p>
     </div>
   );
 };

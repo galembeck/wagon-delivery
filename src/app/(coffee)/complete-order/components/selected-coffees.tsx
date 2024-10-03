@@ -7,7 +7,7 @@ export const SelectedCoffees = () => {
   const { cartItems } = useCart();
 
   return (
-    <div className="flex flex-col gap-3 w-[40rem]">
+    <div className="flex flex-col gap-3 w-full max-w-[40rem] mx-auto">
       <h2 className="text-title-xs font-bold font-baloo text-base-subtitle">
         Cafés escolhidos
       </h2>

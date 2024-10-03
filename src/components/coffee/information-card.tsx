@@ -6,7 +6,7 @@ import { CoffeeInformation } from "@/types";
 import { formatPrice } from "@/utils/format-price";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { QuantityInput } from "@/components/quantity-input";
+import { QuantityInput } from "@/components/coffee/quantity-input";
 import { ShoppingCart } from "phosphor-react";
 import { useCart } from "@/hooks/useCart";
 

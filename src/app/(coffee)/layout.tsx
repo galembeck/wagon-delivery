@@ -1,5 +1,5 @@
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
+import { Header } from "@/components/coffee/header";
+import { Footer } from "@/components/coffee/footer";
 
 import "./styles/styles.css";
 import { CartContextProvider } from "@/contexts/cart-context";

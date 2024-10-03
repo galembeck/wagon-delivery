@@ -1,5 +1,5 @@
 import { coffeesList } from "@/constants";
-import { CoffeeCard } from "./coffee-card";
+import { CoffeeCard } from "../../../components/coffee/information-card";
 
 export const CoffeeList = () => {
   return (

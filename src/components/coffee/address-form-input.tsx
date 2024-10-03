@@ -2,22 +2,23 @@
 import { forwardRef, InputHTMLAttributes, useState } from "react";
 
 type FormInputProps = InputHTMLAttributes<HTMLInputElement> & {
-  hasError?: boolean;
   error?: string;
   rightText?: string;
 };
 
-export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
-  ({ hasError = false, error, rightText, ...props }, ref) => {
+export const AddressFormInput = forwardRef<HTMLInputElement, FormInputProps>(
+  ({ error, className, rightText, ...props }, ref) => {
     const [isFocused, setIsFocused] = useState(false);
 
     return (
-      <div className="flex flex-col gap-[0.3rem] relative">
+      <div
+        className={`flex flex-col gap-[0.3rem] relative max-w-full ${className}`}
+      >
         <div
           className={`flex items-center justify-between h-[2.625rem] rounded bg-base-input transition border-2 ${
             isFocused
               ? "border-brand-yellow-dark"
-              : hasError
+              : error
               ? "border-base-error"
               : "border-transparent"
           }`}
@@ -28,7 +29,7 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
             {...props}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
-            className={`flex-1 bg-transparent border-none h-full px-3 text-xs text-base-text font-roboto placeholder:text-base-label`}
+            className="flex-1 bg-transparent h-full px-3 text-xs text-base-text font-roboto placeholder:text-base-label w-full"
           />
           {rightText && (
             <p className="text-xs mr-3 italic text-base-label">{rightText}</p>
