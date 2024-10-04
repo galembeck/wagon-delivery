@@ -22,7 +22,7 @@ export const Header = ({ type }: HeaderProps) => {
   return (
     <header className="header-container">
       <div className="w-full max-w-[70rem] mr-auto ml-auto max-[1120px]:p-8 flex items-center justify-between">
-        <Link href="/coffee">
+        <Link href="/">
           {type === "coffee" ? (
             <Image
               src="/assets/coffee/coffee-logo.svg"

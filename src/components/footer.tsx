@@ -17,7 +17,7 @@ export const Footer = ({ type }: FooterProps) => {
       <div className="grid gap-8 xl:grid-cols-3 xl:gap-8 w-full">
         <div className="flex flex-col items-start justify-start">
           <div className="flex items-start">
-            <Link href="/coffee">
+            <Link href="/">
               {type === "coffee" ? (
                 <Image
                   src="/assets/coffee/coffee-logo.svg"

@@ -3,7 +3,7 @@ import { deliveryDetails } from "@/constants";
 
 export const DeliveryDetails = () => {
   return (
-    <section className="w-full max-[1120px]:p-8 pb-20 -mt-20 max-[1151px]:mt-48 max-[607px]:mt-[700px] max-[435px]:mt-[750px]">
+    <section className="w-full max-[1120px]:p-8 pb-20 -mt-20 max-[1151px]:mt-48 max-[607px]:mt-20">
       <div className="max-w-[70rem] mr-auto ml-auto">
         <div>
           {deliveryDetails.map((detail, index) => (

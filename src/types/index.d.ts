@@ -22,6 +22,12 @@ export interface FlashFoodCardProps {
   remainingDays: number;
 }
 
+export interface HowItWorksProps {
+  title: string;
+  description: string;
+  image: string;
+}
+
 export interface DetailsCardProps {
   title: string;
   highlight: string;

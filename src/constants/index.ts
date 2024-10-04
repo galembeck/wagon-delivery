@@ -45,6 +45,32 @@ export const flashFood = [
   },
 ];
 
+export const howItWorks = [
+  {
+    title: "Informe o endereço",
+    description:
+      "Defina o endereço de entrega para qual seu pedido será entregue.",
+    image: "/assets/food/how-it-works-1.svg",
+  },
+  {
+    title: "Escolha seu pedido",
+    description: "Viage por uma variedade de opções e vá na sua favorita.",
+    image: "/assets/food/how-it-works-2.svg",
+  },
+  {
+    title: "Pagamento facilitado",
+    description:
+      "É rápido, seguro e simples. Escolha dentre diferentes formas de pagamento.",
+    image: "/assets/food/how-it-works-3.svg",
+  },
+  {
+    title: "Aproveite seu pedido",
+    description:
+      "A comida é preparada por um de nossos restaurantes parceiros e entregue na porta de sua casa.",
+    image: "/assets/food/how-it-works-4.svg",
+  },
+];
+
 export const deliveryDetails = [
   {
     title: "Fome de",
