@@ -59,7 +59,7 @@ export const FoodIntro = () => {
           />
         </div>
 
-        <div className="flex flex-wrap justify-center items-centerbg-gray-100 p-8 mt-20 sm:mt-36">
+        <div className="flex flex-wrap justify-center items-centerbg-gray-100 p-8 mt-20 sm:mt-36 max-[639px]:mt-44">
           {flashFood.map((food, index) => (
             <FlashFoodCard
               key={index}
