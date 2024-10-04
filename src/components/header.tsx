@@ -44,16 +44,46 @@ export const Header = ({ type }: HeaderProps) => {
 
         {isMounted && (
           <div className="header-buttons-container">
-            <div className="flex items-center justify-center relative gap-1 min-w-9 h-9 rounded-[6px] p-2 bg-brand-purple-light">
-              <MapPin size={20} weight="fill" className="text-brand-purple" />
-              <p className="text-base font-normal text-brand-purple-dark">
+            <div
+              className={`flex items-center justify-center relative gap-1 min-w-9 h-9 rounded-[6px] p-2 ${
+                type === "coffee"
+                  ? "bg-brand-purple-light"
+                  : "bg-brand-yellow-light"
+              }`}
+            >
+              <MapPin
+                size={20}
+                weight="fill"
+                className={`${
+                  type === "coffee" ? "text-brand-purple" : "text-brand-yellow"
+                }`}
+              />
+              <p
+                className={`text-base font-normal ${
+                  type === "coffee"
+                    ? "text-brand-purple-dark"
+                    : "text-brand-yellow-dark"
+                }`}
+              >
                 {userRegion}, {userCountry}
               </p>
             </div>
 
-            <div className="flex items-center justify-center relative gap-1 min-w-9 h-9 rounded-[6px] p-2 bg-brand-yellow-light">
+            <div
+              className={`flex items-center justify-center relative gap-1 min-w-9 h-9 rounded-[6px] p-2 ${
+                type === "coffee"
+                  ? "bg-brand-yellow-light"
+                  : "bg-brand-purple-light"
+              }`}
+            >
               {cartQuantity >= 1 && (
-                <div className="flex items-center justify-center absolute top-[calc(-1.25rem/2)] right-[calc(-1.25rem/2)] w-5 h-5 rounded-[50%] bg-brand-yellow-dark text-base-white text-[0.75rem] font-bold">
+                <div
+                  className={`flex items-center justify-center absolute top-[calc(-1.25rem/2)] right-[calc(-1.25rem/2)] w-5 h-5 rounded-[50%] ${
+                    type === "coffee"
+                      ? "bg-brand-yellow-dark"
+                      : "bg-brand-purple-dark"
+                  } text-base-white text-[0.75rem] font-bold`}
+                >
                   {cartQuantity}
                 </div>
               )}
@@ -61,7 +91,11 @@ export const Header = ({ type }: HeaderProps) => {
                 <ShoppingCart
                   size={20}
                   weight="fill"
-                  className="text-brand-yellow-dark"
+                  className={`${
+                    type === "coffee"
+                      ? "text-brand-yellow-dark"
+                      : "text-brand-purple-dark"
+                  }`}
                 />
               </Link>
             </div>
