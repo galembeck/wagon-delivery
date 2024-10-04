@@ -18,6 +18,63 @@ export const rootCategories = [
   "Vegetariana",
 ];
 
+export const flashFood = [
+  {
+    image: "/assets/food/flash-deal-1.png",
+    name: "Greys Vage",
+    restaurant: "Outback Steakhouse",
+    remainingDays: 2,
+  },
+  {
+    image: "/assets/food/flash-deal-2.png",
+    name: "Greys Vage",
+    restaurant: "Outback Steakhouse",
+    remainingDays: 5,
+  },
+  {
+    image: "/assets/food/flash-deal-3.png",
+    name: "Greys Vage",
+    restaurant: "Outback Steakhouse",
+    remainingDays: 7,
+  },
+  {
+    image: "/assets/food/flash-deal-4.png",
+    name: "Greys Vage",
+    restaurant: "Outback Steakhouse",
+    remainingDays: 12,
+  },
+];
+
+export const deliveryDetails = [
+  {
+    title: "Fome de",
+    highlight: "sanduíches/lanches?",
+    description:
+      "Desfrute de sanduíches grandes e perfeitos. A combinação ideal de sabor e crocância em cada mordida.",
+    buttonText: "Peça agora",
+    image: "/assets/food/details-image-1.png",
+    reverse: false,
+  },
+  {
+    title: "Frango frito",
+    highlight: "no almoço de domingo?",
+    description:
+      "Experimente o melhor frango frito, mergulhado em um saboroso molho de limão e pimenta.",
+    buttonText: "Peça agora",
+    image: "/assets/food/details-image-2.png",
+    reverse: true,
+  },
+  {
+    title: "Que tal uma",
+    highlight: "pizza?",
+    description:
+      "Junte-se a um amigo e saboreie uma pizza deliciosa. Aproveite as melhores ofertas e não perca essa delícia.",
+    buttonText: "Peça agora",
+    image: "/assets/food/details-image-3.png",
+    reverse: false,
+  },
+];
+
 export const coffeeDeliveryBenefits = [
   {
     icon: "/icons/shopping-cart.svg",

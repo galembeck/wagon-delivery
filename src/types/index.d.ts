@@ -15,6 +15,22 @@ export interface FooterProps {
   type: "coffee" | "food";
 }
 
+export interface FlashFoodCardProps {
+  image: string;
+  name: string;
+  restaurant: string;
+  remainingDays: number;
+}
+
+export interface DetailsCardProps {
+  title: string;
+  highlight: string;
+  description: string;
+  buttonText: string;
+  image: string;
+  reverse: boolean;
+}
+
 export interface BenefitCardProps {
   icon: string;
   benefit: string | ReactNode;
