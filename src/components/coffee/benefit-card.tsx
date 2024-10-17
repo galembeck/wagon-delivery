@@ -1,5 +1,6 @@
-import { BenefitCardProps } from "@/types";
 import Image from "next/image";
+
+import { BenefitCardProps } from "@/types";
 
 const colorClasses: { [key: string]: string } = {
   "brand-yellow-dark": "bg-brand-yellow-dark",
