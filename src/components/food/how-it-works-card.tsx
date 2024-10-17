@@ -1,5 +1,6 @@
-import { HowItWorksProps } from "@/types";
 import Image from "next/image";
+
+import { HowItWorksProps } from "@/types";
 
 export const HowItWorksCard = ({
   title,
