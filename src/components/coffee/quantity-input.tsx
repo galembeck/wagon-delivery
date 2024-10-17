@@ -1,10 +1,12 @@
 "use client";
 
 import { QuantityInputProps } from "@/types";
+
 import { Minus, Plus } from "phosphor-react";
 
 export const QuantityInput = ({
   size = "medium",
+  type,
   quantity,
   onIncrease,
   onDecrease,
@@ -16,7 +18,13 @@ export const QuantityInput = ({
       }`}
     >
       <button
-        className="w-[0.875rem] h-[0.875rem] border-none bg-none text-brand-purple transition disabled:opacity-[0.4] hover:text-brand-purple-dark"
+        className={`w-[0.875rem] h-[0.875rem] border-none bg-none ${
+          type === "coffee" ? "text-brand-purple" : "text-brand-yellow"
+        } transition disabled:opacity-[0.4] ${
+          type === "coffee"
+            ? "hover:text-brand-purple-dark"
+            : "hover:text-brand-yellow-dark"
+        }`}
         disabled={quantity <= 1}
         onClick={onDecrease}
       >
@@ -29,7 +37,13 @@ export const QuantityInput = ({
         value={quantity}
       />
       <button
-        className="w-[0.875rem] h-[0.875rem] border-none bg-none text-brand-purple transition disabled:opacity-[0.4] hover:text-brand-purple-dark"
+        className={`w-[0.875rem] h-[0.875rem] border-none bg-none ${
+          type === "coffee" ? "text-brand-purple" : "text-brand-yellow"
+        } transition disabled:opacity-[0.4] ${
+          type === "coffee"
+            ? "hover:text-brand-purple-dark"
+            : "hover:text-brand-yellow-dark"
+        }`}
         onClick={onIncrease}
       >
         <Plus size={14} weight="fill" />
