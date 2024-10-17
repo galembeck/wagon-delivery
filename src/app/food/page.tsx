@@ -1,13 +1,14 @@
-import { DeliveryDetails } from "./components/delivery-details";
 import { FoodIntro } from "./components/food-intro";
-import { HowItWorks } from "./components/how-it-works";
+import { FoodList } from "./components/food-list";
+import { InformationalDetails } from "./components/informational-details";
 
 export default function FoodWagonPage() {
   return (
     <main>
       <FoodIntro />
-      <HowItWorks />
-      <DeliveryDetails />
+      <FoodList />
+
+      <InformationalDetails />
     </main>
   );
 }
