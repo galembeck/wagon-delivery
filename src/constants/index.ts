@@ -18,89 +18,6 @@ export const rootCategories = [
   "Vegetariana",
 ];
 
-export const flashFood = [
-  {
-    image: "/assets/food/flash-deal-1.png",
-    name: "Greys Vage",
-    restaurant: "Outback Steakhouse",
-    remainingDays: 2,
-  },
-  {
-    image: "/assets/food/flash-deal-2.png",
-    name: "Greys Vage",
-    restaurant: "Outback Steakhouse",
-    remainingDays: 5,
-  },
-  {
-    image: "/assets/food/flash-deal-3.png",
-    name: "Greys Vage",
-    restaurant: "Outback Steakhouse",
-    remainingDays: 7,
-  },
-  {
-    image: "/assets/food/flash-deal-4.png",
-    name: "Greys Vage",
-    restaurant: "Outback Steakhouse",
-    remainingDays: 12,
-  },
-];
-
-export const howItWorks = [
-  {
-    title: "Informe o endereço",
-    description:
-      "Defina o endereço de entrega para qual seu pedido será entregue.",
-    image: "/assets/food/how-it-works-1.svg",
-  },
-  {
-    title: "Escolha seu pedido",
-    description: "Viage por uma variedade de opções e vá na sua favorita.",
-    image: "/assets/food/how-it-works-2.svg",
-  },
-  {
-    title: "Pagamento facilitado",
-    description:
-      "É rápido, seguro e simples. Escolha dentre diferentes formas de pagamento.",
-    image: "/assets/food/how-it-works-3.svg",
-  },
-  {
-    title: "Aproveite seu pedido",
-    description:
-      "A comida é preparada por um de nossos restaurantes parceiros e entregue na porta de sua casa.",
-    image: "/assets/food/how-it-works-4.svg",
-  },
-];
-
-export const deliveryDetails = [
-  {
-    title: "Fome de",
-    highlight: "sanduíches/lanches?",
-    description:
-      "Desfrute de sanduíches grandes e perfeitos. A combinação ideal de sabor e crocância em cada mordida.",
-    buttonText: "Peça agora",
-    image: "/assets/food/details-image-1.png",
-    reverse: false,
-  },
-  {
-    title: "Frango frito",
-    highlight: "no almoço de domingo?",
-    description:
-      "Experimente o melhor frango frito, mergulhado em um saboroso molho de limão e pimenta.",
-    buttonText: "Peça agora",
-    image: "/assets/food/details-image-2.png",
-    reverse: true,
-  },
-  {
-    title: "Que tal uma",
-    highlight: "pizza?",
-    description:
-      "Junte-se a um amigo e saboreie uma pizza deliciosa. Aproveite as melhores ofertas e não perca essa delícia.",
-    buttonText: "Peça agora",
-    image: "/assets/food/details-image-3.png",
-    reverse: false,
-  },
-];
-
 export const coffeeDeliveryBenefits = [
   {
     icon: "/icons/shopping-cart.svg",
@@ -240,5 +157,99 @@ export const coffeesList = [
     description: "Bebida a base de café, uísque irlandês, açúcar e chantilly",
     photo: "irlandes.png",
     price: 15.9,
+  },
+];
+
+export const flashFood = [
+  {
+    image: "/assets/food/flash-deal-1.png",
+    name: "Salada de Quinoa e Abacate",
+    restaurant: "Fogo de Chão",
+    remainingDays: 2,
+  },
+  {
+    image: "/assets/food/flash-deal-2.png",
+    name: "Farfalle ao Pesto com Tomatinhos Cereja",
+    restaurant: "Olive Garden",
+    remainingDays: 5,
+  },
+  {
+    image: "/assets/food/flash-deal-3.png",
+    name: "Bowl Vegano com Grão-de-bico e Abacate",
+    restaurant: "Coco Bambu",
+    remainingDays: 7,
+  },
+  {
+    image: "/assets/food/flash-deal-4.png",
+    name: "Curry de Vegetais com Leite de Coco",
+    restaurant: "Omatuto",
+    remainingDays: 12,
+  },
+];
+
+export const howItWorks = [
+  {
+    title: "Informe o endereço",
+    description:
+      "Defina o endereço de entrega para qual seu pedido será entregue.",
+    image: "/assets/food/how-it-works-1.svg",
+  },
+  {
+    title: "Escolha seu pedido",
+    description: "Viage por uma variedade de opções e vá na sua favorita.",
+    image: "/assets/food/how-it-works-2.svg",
+  },
+  {
+    title: "Pagamento facilitado",
+    description:
+      "É rápido, seguro e simples. Escolha dentre diferentes formas de pagamento.",
+    image: "/assets/food/how-it-works-3.svg",
+  },
+  {
+    title: "Aproveite seu pedido",
+    description:
+      "A comida é preparada por um de nossos restaurantes parceiros e entregue na porta de sua casa.",
+    image: "/assets/food/how-it-works-4.svg",
+  },
+];
+
+export const foodList = [
+  {
+    id: 1,
+    tags: ["tradicional"],
+    name: "Expresso Tradicional",
+    description: "O tradicional café feito com água quente e grãos moídos",
+    photo: "cheese-burguer.png",
+    price: 7.9,
+  },
+];
+
+export const deliveryDetails = [
+  {
+    title: "Fome de",
+    highlight: "sanduíches/lanches?",
+    description:
+      "Desfrute de sanduíches grandes e perfeitos. A combinação ideal de sabor e crocância em cada mordida.",
+    buttonText: "Peça agora",
+    image: "/assets/food/details-image-1.png",
+    reverse: false,
+  },
+  {
+    title: "Frango frito",
+    highlight: "no almoço de domingo?",
+    description:
+      "Experimente o melhor frango frito, mergulhado em um saboroso molho de limão e pimenta.",
+    buttonText: "Peça agora",
+    image: "/assets/food/details-image-2.png",
+    reverse: true,
+  },
+  {
+    title: "Que tal uma",
+    highlight: "pizza?",
+    description:
+      "Junte-se a um amigo e saboreie uma pizza deliciosa. Aproveite as melhores ofertas e não perca essa delícia.",
+    buttonText: "Peça agora",
+    image: "/assets/food/details-image-3.png",
+    reverse: false,
   },
 ];
