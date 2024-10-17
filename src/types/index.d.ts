@@ -7,6 +7,10 @@ export interface OptionCardProps {
   bgColor: string;
 }
 
+export interface LandingHeaderProps {
+  type: "default" | "order";
+}
+
 export interface HeaderProps {
   type: "coffee" | "food";
 }
@@ -28,7 +32,7 @@ export interface HowItWorksProps {
   image: string;
 }
 
-export interface DetailsCardProps {
+export interface InformationalDetailsCardProps {
   title: string;
   highlight: string;
   description: string;
@@ -61,9 +65,15 @@ export interface ProductInformation {
 
 export interface QuantityInputProps {
   size?: "medium" | "small";
+  type: "coffee" | "food";
   quantity: number;
   onIncrease: () => void;
   onDecrease: () => void;
+}
+
+export interface ProductCardProps {
+  productInformation: ProductInformation;
+  type: "coffee" | "food";
 }
 
 export interface CartItem extends ProductInformation {
