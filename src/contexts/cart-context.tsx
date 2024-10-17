@@ -1,8 +1,10 @@
 "use client";
 
-import { CartContextProviderProps, CartContextType, CartItem } from "@/types";
-import { produce } from "immer";
 import { createContext, useEffect, useState } from "react";
+
+import { produce } from "immer";
+
+import { CartContextProviderProps, CartContextType, CartItem } from "@/types";
 
 export const CartContext = createContext({} as CartContextType);
 
