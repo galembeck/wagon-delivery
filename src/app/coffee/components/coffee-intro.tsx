@@ -1,6 +1,8 @@
-import { BenefitCard } from "@/components/coffee/benefit-card";
-import { coffeeDeliveryBenefits } from "@/constants";
 import Image from "next/image";
+
+import { BenefitCard } from "@/components/coffee/benefit-card";
+
+import { coffeeDeliveryBenefits } from "@/constants";
 
 export const CoffeeIntro = () => {
   return (
