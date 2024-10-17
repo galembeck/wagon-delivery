@@ -1,5 +1,6 @@
-import { FlashFoodCardProps } from "@/types";
 import Image from "next/image";
+
+import { FlashFoodCardProps } from "@/types";
 
 export const FlashFoodCard = ({
   image,
@@ -18,8 +19,8 @@ export const FlashFoodCard = ({
       />
 
       <div className="p-4">
-        <div className="flex items-center justify-between">
-          <h3 className="text-base-title font-bold font-baloo text-regular-md">
+        <div className="flex items-center justify-between gap-2">
+          <h3 className="text-base-title font-bold font-baloo text-regular-sm">
             {name}
           </h3>
           <p className="text-[#F17228] font-semibold font-baloo text-regular-sm">
