@@ -1,11 +1,25 @@
-import { UserButton } from "@clerk/nextjs";
-import { currentUser } from "@clerk/nextjs/server";
-import Image from "next/image";
+"use client";
+
+import { useState, useEffect } from "react";
+
 import Link from "next/link";
+import Image from "next/image";
+
+import { UserButton, useUser } from "@clerk/nextjs";
+
 import { Button, buttonVariants } from "./ui/button";
 
-export const Header = async () => {
-  const user = await currentUser();
+import { LandingHeaderProps } from "@/types";
+
+export const Header = ({ type = "default" }: LandingHeaderProps) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const { user } = useUser();
+
+  useEffect(() => {
+    if (user) {
+      setIsLoaded(true);
+    }
+  }, [user]);
 
   return (
     <header className="header-container">
@@ -26,7 +40,11 @@ export const Header = async () => {
           </Link>
         </div>
 
-        <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
+        <div
+          className={`${
+            type === "order" ? "hidden" : "lg:flex"
+          } absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform`}
+        >
           <ul className="flex items-center justify-center gap-6">
             <li className="hover:text-foreground/70 text-sm">
               <Link href="/">Entregador</Link>
@@ -44,7 +62,7 @@ export const Header = async () => {
         </div>
 
         <div className="flex items-center gap-3">
-          {user ? (
+          {isLoaded ? (
             <UserButton />
           ) : (
             <>
