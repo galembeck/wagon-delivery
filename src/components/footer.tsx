@@ -9,6 +9,7 @@ import {
   TwitterLogo,
   Heart,
 } from "phosphor-react";
+
 import { FooterProps } from "@/types";
 
 export const Footer = ({ type }: FooterProps) => {
