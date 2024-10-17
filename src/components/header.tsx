@@ -1,13 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 
 import { useUserLocation } from "@/hooks/useUserLocation";
-import { MapPin, ShoppingCart } from "phosphor-react";
 import { useCart } from "@/hooks/useCart";
+
 import { HeaderProps } from "@/types";
+
+import { MapPin, ShoppingCart } from "phosphor-react";
 
 export const Header = ({ type }: HeaderProps) => {
   const { userRegion, userCountry } = useUserLocation();
@@ -87,7 +90,7 @@ export const Header = ({ type }: HeaderProps) => {
                   {cartQuantity}
                 </div>
               )}
-              <Link href="/coffee/complete-order">
+              <Link href="/complete-order">
                 <ShoppingCart
                   size={20}
                   weight="fill"
