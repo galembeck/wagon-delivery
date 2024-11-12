@@ -216,11 +216,43 @@ export const howItWorks = [
 export const foodList = [
   {
     id: 1,
-    tags: ["tradicional"],
-    name: "Expresso Tradicional",
-    description: "O tradicional café feito com água quente e grãos moídos",
+    tags: ["Hamburguer"],
+    name: "Cheese Burguer",
+    description: "Pão macio, carne grelhada e queijo derretido.",
     photo: "cheese-burguer.png",
-    price: 7.9,
+    price: 12.9,
+  },
+  {
+    id: 2,
+    tags: ["Pizza"],
+    name: "Pizza de Mussarela",
+    description: "Massa fina, molho de tomate e queijo derretido.",
+    photo: "pizza-mozarella.png",
+    price: 63.9,
+  },
+  {
+    id: 3,
+    tags: ["Pizza"],
+    name: "Pizza de Frango",
+    description: "Massa crocante, molho de tomate e frango desfiado.",
+    photo: "pizza-chicken.png",
+    price: 69.9,
+  },
+  {
+    id: 4,
+    tags: ["Pizza"],
+    name: "Pizza de Pepperoni",
+    description: "Base crocante e generosas fatias de pepperoni levemente picantes, douradas no forno.",
+    photo: "pizza-pepperoni.png",
+    price: 69.9,
+  },
+  {
+    id: 5,
+    tags: ["Pizza"],
+    name: "Pizza de Chocolate",
+    description: "Uma delícia doce e irresistível!",
+    photo: "pizza-chocolate.png",
+    price: 74.9,
   },
 ];
 
