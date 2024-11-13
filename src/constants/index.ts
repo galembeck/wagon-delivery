@@ -310,6 +310,39 @@ export const foodList = [
     photo: "japanese-hotroll.png",
     price: 15.9,
   },
+  {
+    id: 13,
+    tags: ["vegano"],
+    name: "Hambúrguer Vegano",
+    description: "Que tal uma opção de hambúrguer vegano?",
+    photo: "veggie-burger.png",
+    price: 17.9,
+  },
+  {
+    id: 14,
+    tags: ["vegano"],
+    name: "Sushi Vegano",
+    description: "Uma opção de sushi vegano para você!",
+    photo: "veggie-sushi.png",
+    price: 24.9,
+  },
+  {
+    id: 15,
+    tags: ["vegano"],
+    name: "Pizza Vegana",
+    description: "Uma pizza vegana deliciosa!",
+    photo: "veggie-pizza.png",
+    price: 29.9,
+  },
+  {
+    id: 16,
+    tags: ["vegano"],
+    name: "Bolo Vegano",
+    description: "Um bolo vegano de baunilha com cobertura.",
+    photo: "veggie-vanillac.png",
+    price: 37.9,
+  },
+
 ];
 
 export const deliveryDetails = [
