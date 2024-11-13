@@ -59,7 +59,7 @@ export const Header = ({ type }: HeaderProps) => {
                 weight="fill"
                 className={`${
                   type === "coffee" ? "text-brand-purple" : "text-brand-yellow"
-                }`}
+                } max-[428px]:hidden`}
               />
               <p
                 className={`text-base font-normal ${

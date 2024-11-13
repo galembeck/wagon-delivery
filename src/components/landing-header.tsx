@@ -43,7 +43,7 @@ export const Header = ({ type = "default" }: LandingHeaderProps) => {
         <div
           className={`${
             type === "order" ? "hidden" : "lg:flex"
-          } absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform`}
+          } absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform max-[884px]:hidden`}
         >
           <ul className="flex items-center justify-center gap-6">
             <li className="hover:text-foreground/70 text-sm">
