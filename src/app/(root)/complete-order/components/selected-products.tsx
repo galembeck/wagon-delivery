@@ -1,7 +1,7 @@
 import { useCart } from "@/hooks/useCart";
 
 import { PurchaseConfirmation } from "./purchase-confirmation";
-import { CoffeeCartCard } from "./coffee-cart-card";
+import { ProductCartCard } from "./product-cart-card";
 
 export const SelectedProducts = () => {
   const { cartItems } = useCart();
@@ -14,7 +14,7 @@ export const SelectedProducts = () => {
 
       <div className="w-full bg-base-card p-10 flex flex-col rounded-[6px_44px_6px_44px]">
         {cartItems.map((item) => (
-          <CoffeeCartCard key={item.id} coffee={item} />
+          <ProductCartCard key={item.id} product={item} type={item.type} />
         ))}
 
         <PurchaseConfirmation />

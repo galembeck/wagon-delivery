@@ -56,6 +56,7 @@ export interface InfoWithIconProps {
 
 export interface ProductInformation {
   id: number;
+  type: string;
   tags: string[];
   name: string;
   description: string;
@@ -111,8 +112,9 @@ export interface ErrorsType {
   };
 }
 
-export interface CoffeeCartCardProps {
-  coffee: CartItem;
+export interface ProductCartCardProps {
+  product: CartItem;
+  type: string;
 }
 
 export type PaymentMethodInputProps = InputHTMLAttributes<HTMLInputElement> & {

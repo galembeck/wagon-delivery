@@ -44,6 +44,7 @@ export const coffeeDeliveryBenefits = [
 export const coffeesList = [
   {
     id: 1,
+    type: "coffee",
     tags: ["tradicional"],
     name: "Expresso Tradicional",
     description: "O tradicional café feito com água quente e grãos moídos",
@@ -52,6 +53,7 @@ export const coffeesList = [
   },
   {
     id: 2,
+    type: "coffee",
     tags: ["tradicional"],
     name: "Expresso Americano",
     description: "Expresso diluído, menos intenso que o tradicional",
@@ -60,6 +62,7 @@ export const coffeesList = [
   },
   {
     id: 3,
+    type: "coffee",
     tags: ["tradicional"],
     name: "Expresso Cremoso",
     description: "Café expresso tradicional com espuma cremosa",
@@ -68,6 +71,7 @@ export const coffeesList = [
   },
   {
     id: 4,
+    type: "coffee",
     tags: ["tradicional", "gelado"],
     name: "Expresso Gelado",
     description: "Bebida preparada com café expresso e cubos de gelo",
@@ -76,6 +80,7 @@ export const coffeesList = [
   },
   {
     id: 5,
+    type: "coffee",
     tags: ["tradicional", "com leite"],
     name: "Café com Leite",
     description: "Meio a meio de expresso tradicional com leite vaporizado",
@@ -84,6 +89,7 @@ export const coffeesList = [
   },
   {
     id: 6,
+    type: "coffee",
     tags: ["tradicional", "com leite"],
     name: "Latte",
     description:
@@ -93,6 +99,7 @@ export const coffeesList = [
   },
   {
     id: 7,
+    type: "coffee",
     tags: ["tradicional", "com leite"],
     name: "Capuccino",
     description:
@@ -102,6 +109,7 @@ export const coffeesList = [
   },
   {
     id: 8,
+    type: "coffee",
     tags: ["tradicional", "com leite"],
     name: "Macchiato",
     description:
@@ -111,6 +119,7 @@ export const coffeesList = [
   },
   {
     id: 9,
+    type: "coffee",
     tags: ["tradicional", "com leite"],
     name: "Mocaccino",
     description: "Café expresso com calda de chocolate, pouco leite e espuma",
@@ -119,6 +128,7 @@ export const coffeesList = [
   },
   {
     id: 10,
+    type: "coffee",
     tags: ["especial", "com leite"],
     name: "Chocolate Quente",
     description: "Bebida feita com chocolate dissolvido no leite quente e café",
@@ -127,6 +137,7 @@ export const coffeesList = [
   },
   {
     id: 11,
+    type: "coffee",
     tags: ["especial", "alcoólico", "gelado"],
     name: "Cubano",
     description:
@@ -136,6 +147,7 @@ export const coffeesList = [
   },
   {
     id: 12,
+    type: "coffee",
     tags: ["especial"],
     name: "Havaiano",
     description: "Bebida adocicada preparada com café e leite de coco",
@@ -144,6 +156,7 @@ export const coffeesList = [
   },
   {
     id: 13,
+    type: "coffee",
     tags: ["especial"],
     name: "Árabe",
     description: "Bebida preparada com grãos de café árabe e especiarias",
@@ -152,6 +165,7 @@ export const coffeesList = [
   },
   {
     id: 14,
+    type: "coffee",
     tags: ["especial", "alcoólico"],
     name: "Irlandês",
     description: "Bebida a base de café, uísque irlandês, açúcar e chantilly",
@@ -216,6 +230,7 @@ export const howItWorks = [
 export const foodList = [
   {
     id: 1,
+    type: "food",
     tags: ["Hamburguer"],
     name: "Cheese Burguer",
     description: "Pão macio, carne grelhada e queijo derretido.",
@@ -224,6 +239,7 @@ export const foodList = [
   },
   {
     id: 2,
+    type: "food",
     tags: ["Hamburguer"],
     name: "X-Bacon",
     description: "Pão macio, carne suculenta, queijo derretido e muito bacon crocante.",
@@ -232,6 +248,7 @@ export const foodList = [
   },
   {
     id: 3,
+    type: "food",
     tags: ["Hamburguer"],
     name: "Chicken Burger",
     description: "Peito de frango grelhado, com molho especial, alface e pão macio.",
@@ -240,6 +257,7 @@ export const foodList = [
   },
   {
     id: 4,
+    type: "food",
     tags: ["Hamburguer"],
     name: "Big Cheese",
     description: "Três suculentas carnes, muito queijo derretido e um molho especial.",
@@ -248,6 +266,7 @@ export const foodList = [
   },
   {
     id: 5,
+    type: "food",
     tags: ["Pizza"],
     name: "Pizza de Mussarela",
     description: "Massa fina, molho de tomate e queijo derretido.",
@@ -256,6 +275,7 @@ export const foodList = [
   },
   {
     id: 6,
+    type: "food",
     tags: ["Pizza"],
     name: "Pizza de Frango",
     description: "Massa crocante, molho de tomate e frango desfiado.",
@@ -264,6 +284,7 @@ export const foodList = [
   },
   {
     id: 7,
+    type: "food",
     tags: ["Pizza"],
     name: "Pizza de Pepperoni",
     description: "Base crocante e generosas fatias de pepperoni levemente picantes, douradas no forno.",
@@ -272,6 +293,7 @@ export const foodList = [
   },
   {
     id: 8,
+    type: "food",
     tags: ["Pizza"],
     name: "Pizza de Chocolate",
     description: "Uma delícia doce e irresistível!",
@@ -280,6 +302,7 @@ export const foodList = [
   },
   {
     id: 9,
+    type: "food",
     tags: ["Japa"],
     name: "Combo de Sushi",
     description: "Combo com os melhores tipos de sushi!",
@@ -288,6 +311,7 @@ export const foodList = [
   },
   {
     id: 10,
+    type: "food",
     tags: ["Japa"],
     name: "Temaki",
     description: "Salmão irresistível envolto por algas secas!",
@@ -296,6 +320,7 @@ export const foodList = [
   },
   {
     id: 11,
+    type: "food",
     tags: ["Japa"],
     name: "Shimeji",
     description: "O prato fungi mais adorado da cultura japonesa!",
@@ -304,6 +329,7 @@ export const foodList = [
   },
   {
     id: 12,
+    type: "food",
     tags: ["Japa"],
     name: "Porção de Hot Roll",
     description: "Uma porção de hot rolls com cream-cheese!",
@@ -312,6 +338,7 @@ export const foodList = [
   },
   {
     id: 13,
+    type: "food",
     tags: ["vegano"],
     name: "Hambúrguer Vegano",
     description: "Que tal uma opção de hambúrguer vegano?",
@@ -320,6 +347,7 @@ export const foodList = [
   },
   {
     id: 14,
+    type: "food",
     tags: ["vegano"],
     name: "Sushi Vegano",
     description: "Uma opção de sushi vegano para você!",
@@ -328,6 +356,7 @@ export const foodList = [
   },
   {
     id: 15,
+    type: "food",
     tags: ["vegano"],
     name: "Pizza Vegana",
     description: "Uma pizza vegana deliciosa!",
@@ -336,6 +365,7 @@ export const foodList = [
   },
   {
     id: 16,
+    type: "food",
     tags: ["vegano"],
     name: "Bolo Vegano",
     description: "Um bolo vegano de baunilha com cobertura.",

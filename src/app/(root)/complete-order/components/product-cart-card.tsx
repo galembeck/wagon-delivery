@@ -9,41 +9,50 @@ import { formatPrice } from "@/utils/format-price";
 
 import { useCart } from "@/hooks/useCart";
 
-import { CoffeeCartCardProps } from "@/types";
+import { ProductCartCardProps } from "@/types";
 
 import { Trash } from "phosphor-react";
 
-export const CoffeeCartCard = ({ coffee }: CoffeeCartCardProps) => {
+export const ProductCartCard = ({ product }: ProductCartCardProps) => {
   const { changeCartItemQuantity, removeCartItem } = useCart();
 
   function handleIncrease() {
-    changeCartItemQuantity(coffee.id, "increase");
+    changeCartItemQuantity(product.id, "increase");
   }
 
   function handleDecrease() {
-    changeCartItemQuantity(coffee.id, "decrease");
+    changeCartItemQuantity(product.id, "decrease");
   }
 
   function handleRemove() {
-    removeCartItem(coffee.id);
+    removeCartItem(product.id);
   }
 
-  const coffeeTotal = coffee.price * coffee.quantity;
-  const formattedPrice = formatPrice(coffeeTotal);
+  const cartTotal = product.price * product.quantity;
+  const formattedPrice = formatPrice(cartTotal);
 
   return (
     <div className="flex items-center justify-between w-full border-b border-base-button pb-6 mb-6">
       <div className="flex items-center gap-5">
-        <Image
-          src={`/assets/coffee/coffees/${coffee.photo}`}
-          alt="Coffee"
-          width={64}
-          height={64}
-        />
+        {product.type === "coffee" ? (
+          <Image
+            src={`/assets/coffee/coffees/${product.photo}`}
+            alt="Coffee"
+            width={64}
+            height={64}
+          />
+        ) : (
+          <Image
+            src={`/assets/food/food/${product.photo}`}
+            alt="Food"
+            width={64}
+            height={64}
+          />
+        )}
 
         <div>
           <p className="text-base-subtitle font-baloo font-bold text-regular-md self-start">
-            {coffee.name}
+            {product.name}
           </p>
 
           <div className="flex items-center gap-2 mt-2 h-8">
@@ -53,7 +62,7 @@ export const CoffeeCartCard = ({ coffee }: CoffeeCartCardProps) => {
                 type="coffee"
                 onIncrease={handleIncrease}
                 onDecrease={handleDecrease}
-                quantity={coffee.quantity}
+                quantity={product.quantity}
               />
             </div>
 

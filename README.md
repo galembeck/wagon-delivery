@@ -4,6 +4,7 @@
 
 **WagonDelivery** é um projeto desenvolvido durante as aulas de **Desenvolvimento WEB** do curso de graduação de Engenharia de Computação da Universidade Pontifícia Católica de Campinas (**PUC-Campinas**), que visa otimizar a logística de entrega digital. Utilizando o poder de **React**, **Next.js** e **TailwindCSS**, a plataforma fornece uma experiência de usuário elegante, funcional e escalável. **Clerk** é utilizado para gerenciar autenticação e controle de acesso, enquanto **Shadcn** auxilia com componentes de UI estilizados e personalizados.
 
+Acesse o projeto/código do GitHub em https://github.com/galembeck/wagon-delivery
 Acesse o preview em https://wagon-delivery.vercel.app
 
 ---
